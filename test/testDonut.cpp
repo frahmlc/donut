@@ -9,8 +9,9 @@
 double NUMERICAL_TOLERANCE = 1e-8;
 
 BOOST_AUTO_TEST_CASE( construction ) {
-	Donut donut;
-	BOOST_CHECK(donut.getRadius() == 0);
+	Position center(0.0, 0.0);
+	Donut donut(0.0, center);
+	BOOST_CHECK(&donut > 0);
 }
 
 BOOST_AUTO_TEST_CASE( positioning ) {

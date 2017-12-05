@@ -9,14 +9,15 @@ CircularScanner::CircularScanner(double radius, int steps) :_radius(radius), _st
 		double x = _radius * cos(ratio * TWOPI);
 		double y = _radius * sin(ratio * TWOPI);
 		Position p(x, y);
-		scanningPositions.push_back(p);
+		_scanningPositions.push_back(p);
 	}
 }
 
 Position CircularScanner::nextPosition() {
-	static std::vector<Position>::iterator iterator = scanningPositions.begin();
-	if(iterator == scanningPositions.end()) {
-		iterator = scanningPositions.begin();
+	static std::vector<Position>::iterator iterator = _scanningPositions.begin();
+	// reset iterator when the end is reached
+	if(iterator == _scanningPositions.end()) {
+		iterator = _scanningPositions.begin();
 	}
 	return *iterator++;
 }

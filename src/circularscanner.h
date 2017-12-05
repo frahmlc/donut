@@ -7,7 +7,7 @@
 class CircularScanner {
 	double _radius;
 	int _steps;
-	std::vector<Position> scanningPositions;
+	std::vector<Position> _scanningPositions;
 public:
 	CircularScanner(double radius, int steps);
 	Position nextPosition();

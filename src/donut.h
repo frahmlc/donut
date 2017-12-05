@@ -4,13 +4,13 @@
 #include "position.h"
 
 class Donut {
-	double radius; // in um
-	Position center;
+	double _radius; // in um
+	Position _center;
 public:
-	Donut(double r = 0.0, Position p = Position(0.0, 0.0));
-	double getRadius();
-	void setCenter(Position x) { center = x; };
-	Position getCenter() { return center; };
+	Donut(double radius, Position center); // Constructor ;-)
+	double getRadius() { return _radius; };
+	void setCenter(Position x) { _center = x; };
+	Position getCenter() { return _center; };
 	double valueAt(Position x);
 };
 
