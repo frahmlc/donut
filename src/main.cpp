@@ -11,7 +11,7 @@ int main() {
 
 	// Initialize the scanning procedure
 	double scanningRadius = 0.05;
-	int scanningSteps = 1000;
+	int scanningSteps = 50;
 	CircularScanner scanner(scanningRadius, scanningSteps);
 
 	// Set up a molecule near the center
