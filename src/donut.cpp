@@ -9,5 +9,6 @@ double Donut::getRadius() {
 
 double Donut::valueAt(Position x) {
 	double r = center.distanceTo(x) / radius;
-	return r * r * exp( 1.0 - r * r );
+	double rsq = r * r;
+	return rsq * exp( 1.0 - rsq ); // approximation for 2D donut PSF
 }

@@ -15,6 +15,7 @@ BOOST_AUTO_TEST_CASE( nextPosition ) {
 	CircularScanner scanner(1.0, 2);
 	Position right(1.0, 0.0);
 	Position left(-1.0, 0.0);
-	BOOST_CHECK(scanner.nextPosition() == right);
-	BOOST_CHECK(scanner.nextPosition() == left);
+	BOOST_CHECK(scanner.nextPosition().distanceTo(right) < NUMERICAL_TOLERANCE);
+	BOOST_CHECK(scanner.nextPosition().distanceTo(left) < NUMERICAL_TOLERANCE);
+	BOOST_CHECK(scanner.nextPosition().distanceTo(right) < NUMERICAL_TOLERANCE);
 }
