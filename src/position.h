@@ -2,7 +2,6 @@
 #define POSITION_H
 
 class Position {
-private:
 	double _x, _y;
 public:
 	Position(double x, double y);

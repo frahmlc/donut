@@ -4,7 +4,6 @@
 #include "position.h"
 
 class Donut {
-private:
 	double radius; // in um
 	Position center;
 public:

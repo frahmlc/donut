@@ -18,3 +18,6 @@ foreach(testSrc ${TEST_SRCS})
 	set_target_properties(${testName} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/testBin)
 	add_test(NAME ${testName} WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/testBin COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/testBin/${testName} )
 endforeach(testSrc)
+
+add_executable(donutscan src/main.cpp)
+target_link_libraries(donutscan donut position circularscanner)
